@@ -3,9 +3,9 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Hydeout
-tagline:          'A Jekyll theme'
-description:      'The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.'
+title:            Jayoung Ryu
+#tagline:          'A Jekyll theme'
+#description:      'The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.'
 url:              https://jykr.github.io
 #baseurl:          '/hydeout'
                   # the optional subpath of your site, e.g. "/blog"
@@ -15,7 +15,8 @@ url:              https://jykr.github.io
                   # sidebar_blog_link below.
 
 author:
-  name:           'Andrew Fong'
+  name:           Jayoung Ryu
+  email: jayoung_ryu@g.harvard.edu
   url:            https://twitter.com/fongandrewc
 
 paginate:         5
@@ -27,7 +28,7 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
 
-remote_theme: fongandrew/hydeou
+remote_theme: fongandrew/hydeout
 
 # Sidebar link settings
 sidebar_home_link:  true
