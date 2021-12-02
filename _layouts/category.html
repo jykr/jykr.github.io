@@ -6,15 +6,33 @@ layout: page
   {{ content }}
 {% endunless %}
 
+
+
 <ul class="posts-list">
+  <style>
+    img{
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+    }
+  </style>
   {% assign category = page.category | default: page.title %}
   {% for post in site.categories[category] %}
     <li>
       <h3>
-        <a href="{{ post.url | relative_url }}">
-          {{ post.title }}
+        <a href="{{ post.url | relative_url }}", style="color: black; text-decoration: underline;text-decoration-style: dotted;">
+          {{ post.title }}</a>
+
           <small>{{ post.date | date_to_string }}</small>
-        </a>
+          <a href="{{ post.url | relative_url }}">
+            <div style="margin-top: 10px;font-size: 0rem;">
+
+            {{ post.content }}
+            </div>
+          </a>
+
+        <hr>
+
       </h3>
     </li>
   {% endfor %}

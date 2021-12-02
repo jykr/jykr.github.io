@@ -1,33 +1,12 @@
 ---
 layout: index
 title: Home
+sidebar_sort_order: 1
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<img src="{{site.baseurl}}/assets/img/profile_picture.png" alt="hi" class="inline" width="250" height="250"/> 
 
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
 
-    {{ post.content }}
-  </article>
-  {% endfor %}
-</div>
+<p>I am a PhD student being advised by <a href="https://main.pinellolab.partners.org/">Luca Pinello</a> at Harvard University <a href="https://dbmi.hms.harvard.edu/education/big-phd-program">Bioinformatics &amp; Integrative Genomics Program</a> and Massachusetts General Hospital. </p>
+<p>My research interest lies in developing computational methods to better study the gene regulatory relationship. I work with <strong>single cell genomics</strong> and <strong>CRISPR screen data</strong> to study the relationship between genomic features and variant functions. I am interested in building <strong>interpretable statistical methods</strong> and adopting <strong>machine learning methods used in natural language processing</strong> to the genomics data.</p>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>

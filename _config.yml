@@ -17,9 +17,9 @@ url:              https://jykr.github.io
 author:
   name:           Jayoung Ryu
   email: jayoung_ryu@g.harvard.edu
-  url:            https://twitter.com/fongandrewc
+  url:            https://twitter.com/jykr
 
-paginate:         5
+#paginate:         5
 # paginate_path:    '/page:num'
                     # Or '/blog/page:num' if you want to move your index pages
 

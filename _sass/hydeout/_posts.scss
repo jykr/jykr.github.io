@@ -62,6 +62,10 @@ h2.page-title {
   }
 }
 
+.post-tn a {
+  padding: 10px
+}
+
 article + *,
 .post-body ~ section {
   border-top: 1px solid $border-color;
