@@ -4,7 +4,7 @@ highlighter:      rouge
 
 # Setup
 title:            Jayoung Ryu
-url:              jykr.github.io
+url:              https://github.com/jykr/
 #baseurl:          '/hydeout'
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
@@ -15,7 +15,8 @@ url:              jykr.github.io
 author:
   name:           Jayoung Ryu
   email: jayoung_ryu@g.harvard.edu
-  url:            https://twitter.com/jykr
+  url:            jykr.github.io
+  
 
 #paginate:         5
 # paginate_path:    '/page:num'
