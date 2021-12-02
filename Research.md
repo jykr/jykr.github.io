@@ -7,7 +7,7 @@ sidebar_sort_order: 2
 
 ### Computational method development on CRISPR screen
 *Aug 2021-*  
-In collaboration with [Sherwood lab](https://sherwoodlab.bwh.harvard.edu/), I am analyzing and developing computational method to better identify the functional variants in CRISPR base editor screens.  
+In collaboration with [Sherwood lab](https://sherwoodlab.bwh.harvard.edu/), I am analyzing and developing computational method to better identify the functional variants in CRISPR base editor screens.   
 
 ---
 
@@ -17,30 +17,35 @@ In collaboration with [Sherwood lab](https://sherwoodlab.bwh.harvard.edu/), I am
 
 <img src="{{site.baseurl}}/assets/img/simba.png" alt="simba" class="inline" width="500" />
 Our team developed [SIMBA](https://www.biorxiv.org/content/10.1101/2021.10.17.464750v1), a single cell embedding method that utilizes [PyTorch-BigGraph](https://github.com/facebookresearch/PyTorch-BigGraph), a multirelational graph embedding method in collaboration with Facebook Research.   
+By formulating the single cell genomics data as the graph with cell and feature nodes, we are able to simultaneously learn the relationship between cells and multiple features, and the regulatory relationship between the different type of features.  
+We aim to further expand to build more interpretable and generalizable framework that can work on perturbation and time series single cell data.  
+
 
 ---
 
 
 ### Optimal transport based embedding of single cell genomics data
 *May-Jul 2021*  
+Based on the approach applied to Natural Language Processing to embed words, sentences and documents, I studied the how the cells and their genomic features can embedded and queried in the lower dimensional embedding.  
+
 
 ---
 
 ### Detecting structural variants from single cell whole genome amplification sequencing
 *Aug-Nov 2021*  
-Developed structural variant detection method from single cell whole genome sequencing data amplified with primary template-directed amplification (PTA) sampled from brain in [Park lab](https://compbio.hms.harvard.edu/index). 
+Human brain has somatic mutations that are yet uncharacterized for their action in neurological disorders including Alzheimer's disease. I analyzed and developed structural variant detection method from single cell whole genome sequencing data amplified with primary template-directed amplification (PTA) sampled from brain in [Park lab](https://compbio.hms.harvard.edu/index).  
 
 ---
 
 ### Prediction model from chromatin accessibility to gene expression
 *Feb-Jul 2020*  
-I analyzed fetal heart development SNARE-seq data to build and evaluate a shared prediction model from the chromatin accessibility to the gene expression in [Kharchenko lab](http://pklab.med.harvard.edu/).
+Recent development of multiomic profiling in single cells opened a way to study the relationship between chromatin accessibility of regulatory elements and the downstream gene regulation. I analyzed fetal heart development SNARE-seq data to build and evaluate a shared prediction model from the chromatin accessibility to the gene expression in [Kharchenko lab](http://pklab.med.harvard.edu/).
 
 ---
 
 ### Single-cell expression profiling of metastatic bladder cancer
 *Oct-Dec 2019*  
-Identified heterogeneity in metastatic bladder cancer samples in [Van Allen lab](https://vanallenlab.dana-farber.org/).
+Single cell profiling enables the study of heterogeneity, and can give major insigts on cancer biology including the composition of the cancer and their properties. I identified the heterogeneity in metastatic bladder cancer samples in [Van Allen lab](https://vanallenlab.dana-farber.org/).
 
 ---
 
@@ -49,7 +54,7 @@ Identified heterogeneity in metastatic bladder cancer samples in [Van Allen lab]
   
 
 <img src="{{site.baseurl}}/assets/img/constse.png" alt="constitutive super-enhancers" class="inline" width="400"/>
-In [Jung lab](https://junglab.wixsite.com/home), I showed with our team that the constitutive super-enhancers are associated with the fast recovery of chromatin loops after cohesin disruption. Resulted in first author [publication](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2646-3) and oral presentation in [international conference](http://www.guolianglab.org/APBC2019/).
+Super-enhancers are a large genomic region that contains multiple regulatory elements showing strong activation signal. Previously, they have been known to be highly cell type specific to define different cell types. In [Jung lab](https://junglab.wixsite.com/home), our team identified a group of super-enhancers that are shared across numerous cell types. Those constitutive super-enhancers are associated with the fast recovery of chromatin loops after cohesin disruption, suggesting their regulatory role in chromatin organization. This project resulted in first author [publication](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2646-3) and oral presentation in [international conference](http://www.guolianglab.org/APBC2019/).
 
 ---
 
