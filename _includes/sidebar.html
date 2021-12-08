@@ -1,13 +1,26 @@
+
+<head>
+<style>
+div.sidebar {text-align:center;}
+a.sidebar {text-align:center;}
+p.site-title {text-align:center;}
+a.icon {display: inline-block;}
+div.site-title {text-align:center;}
+nav {text-align:center;}
+</style>
+</head>
+<body>
 <div id="sidebar">
   <header>
-    <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
+    <{% if page.layout == "index" %}p{% else %}div{% endif %} class="site-title">
       <a href="{{ "/" | relative_url }}" style="text-decoration: none!important;">
         {% unless page.url == "/" %}
           <span class="back-arrow icon">{% include svg/back-arrow.svg %}</span>
         {% endunless %}
+        <!--{% if page.layout == "index" %}<img class="circular_img" src="{{ site.baseurl }}assets/img/profile_picture.png" alt="hi" class="inline"/ width="250px" height="250px">{% else %}<img class="circular_img center_img" class="inline"width="250px" height="250px"/>{% endif %}-->
         {{ site.title }}
       </a>
-    </{% if page.layout == "index" %}h1{% else %}div{% endif %}>
+    </{% if page.layout == "index" %}p{% else %}div{% endif %}>
     <!--<p class="lead">{{ site.description }}</p> -->
   </header>
   {% include sidebar-nav-links.html %}
@@ -19,3 +32,4 @@
   {% include sidebar-icon-links.html %}
   {% include copyright.html %}
 </div>
+</body>

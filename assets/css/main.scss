@@ -2,9 +2,13 @@
 # Use a comment to ensure Jekyll reads the file to be transformed into CSS later
 # only main files contain this front matter, not partials.
 ---
-$title-font-size: 2.4rem;
-$sidebar-bg-color: #333333;
+$title-font-family: 'Syncopate', sans-serif;
+$title-font-size: 2rem;
+$sidebar-bg-color: #edf1d1;
+$sidebar-fg-color: #333333;
+$sidebar-text-color: #333333;
 $large-font-size: 1rem;
 $link-color: #767676;
-
+$root-font-family: -apple-system, sans-serif;
+$sidebar-sticky: false;
 @import "hydeout";
