@@ -22,7 +22,7 @@ Our lab hosted a full-day CRISPR tutorial ["A Practical Introduction to the Desi
 *July 2022*  
 I jointly held CRISPR Screen Design and Analysis Workshop with members of [Pinello lab](https://main.pinellolab.partners.org/) and [Sherwood lab](https://sherwoodlab.bwh.harvard.edu/) for IGVF community. I presented about the analysis methods of base editor CRISPR screens and its analysis methods.
 
-### Invited Talk at Current Topics in Bioinformatics seminar series
+### Invited Talk at Current Topics in Bioinformatics Seminar Series
 *Nov 2021*  
 Jointly presented SIMBA, a graph representation learning based single cell embedding method's [concepts and tutorials](https://simba-bio.readthedocs.io/en/latest/) at the [Harvard Bioinformatics Core Bioinformatics Seminar Series](https://bioinformatics.sph.harvard.edu/current-bioinformatics-topics-workshops).
 
