@@ -12,7 +12,7 @@ sidebar_sort_order: 2
 <p style="color:grey; font-size:12px"> <center><em> Experimental design of base editor reporter screen </em></center> </p>
 <div class="panel">
 	<img src="{{site.baseurl}}/assets/img/research/model_design.svg" alt="base editor" class="inline" width="200px" />
-	<p>As part of the NIH <a href="https://www.genome.gov/Funded-Programs-Projects/Impact-of-Genomic-Variation-on-Function-Consortium">IGVF consortium</a> and in collaboration with <a href="https://sherwoodlab.bwh.harvard.edu/">Sherwood lab</a>, I am developing computational method to better identify the functional variants in CRISPR base editor screens. Specifically, I'm working on developing the interpretable model based on probabilistic programming language <a href="http://pyro.ai/">Pyro</a>. </p>
+	<p>As part of the NIH <a href="https://www.genome.gov/Funded-Programs-Projects/Impact-of-Genomic-Variation-on-Function-Consortium">IGVF consortium</a> and in collaboration with <a href="https://sherwoodlab.bwh.harvard.edu/">Sherwood lab</a>, I am developing computational method to better identify the functional variants in CRISPR base editor screens. Specifically, I'm working on developing the screen analysis method that takes the variable editing efficiency and pattern into account that utilizes stochastic variational inference (SVI) through <a href="http://pyro.ai/">probabilistic programming language</a>. The model directly recapitulates count data generation process which provides direct interpretability.  </p>
 </div>
 
    
