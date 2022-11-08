@@ -8,7 +8,7 @@ sidebar_sort_order: 2
 ### [Computational method development on CRISPR base editor screen](https://github.com/jykr/beige)
 *Aug 2021-*  
 [CRISPR base editors](http://www.nature.com/articles/s41587-020-0561-9) have opened a way to investigate the effect of individual variant to the phenotype. In [SpRY-base editor](https://www.science.org/doi/10.1126/science.aba8853) screens, virtually all variants can be edited and by selecting cells based on the phenotype we can screen the variants that have effect to the phenotype of interest. 
-<img src="{{site.baseurl}}/assets/img/research/reporter_screen.svg" alt="base editor reporter screens" class="inline" width="600px" style="margin: 10px 10px/>
+<img src="{{site.baseurl}}/assets/img/research/reporter_screen.svg" alt="base editor reporter screens" class="inline" width="600px" style="margin:10px 10px"/>
 
 <p style="color:grey; font-size:12px">Experimental design of base editor reporter screen</p>
 <div class="panel">
