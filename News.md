@@ -6,8 +6,11 @@ sidebar_sort_order: 3
 ---
 ### Awarded KASBP-MOGAM Scholarship
 *Oct 2022*  
-I was awarded the [KASBP-MOGAM Scholarship](https://kasbp.org/announcement/12930925), thanks for the support! 
+I was awarded the [KASBP-MOGAM Scholarship](https://kasbp.org/announcement/12967770), thanks for the support! 
 
+### Presented poster at 2022 American Society of Human Genetics Conference
+*Oct 2022*  
+I presented our project on CRISPR base editor screen model in the 2022 American Society of Human Genetics Conference at Los Angeles.
 
 ### Presented poster at 2022 Impact of Genomic Variation on Function (IGVF) Annual Meeting
 *Sep 2022*  
