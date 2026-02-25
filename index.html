@@ -1,51 +1,506 @@
----
-layout: index
-title: Home
-sidebar_sort_order: 1
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jayoung Ryu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:       #1c1c1e;
+      --surface:  #252528;
+      --border:   #3a3a3e;
+      --text:     #e0dede;
+      --muted:    #888886;
+      --accent:   #b0a5e8;
+      --accent-h: #bdb9f0;
+      --radius:   6px;
+    }
 
-<div class="panel">
-<img src="{{site.baseurl}}/assets/img/profile_picture.png" alt="hi" class="inline" width="200"/>
-<img src="{{site.baseurl}}/assets/img/cny.jpg" alt="hi" class="inline" height="200" style="object-fit:cover"/>
-</div>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-<p>I am a PhD student being advised by <a href="https://main.pinellolab.partners.org/">Luca Pinello</a> at Harvard University <a href="https://dbmi.hms.harvard.edu/education/big-phd-program">Bioinformatics &amp; Integrative Genomics Program</a> and Massachusetts General Hospital. </p>
-<br>
-<p>My research interest lies in developing computational methods to better study the gene regulatory relationship. I work with <strong>single cell genomics</strong> and <strong>CRISPR screen data</strong> to study the relationship between genomic features and variant functions. </p>
-<br>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
 
+    /* ── Navigation ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(28, 28, 30, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
 
-<div class="panel">
-	<div class="panel-column">
-		<img src="{{site.baseurl}}/assets/img/overview.jpg" alt="hi" class="inline" style="height: 200px;"/>
-		<p style="color:grey; font-size:12px">Uni and multi-modal single cell profile allows for studying gene regulatory relationship within and between modality. (Image: Li et al., 2020)</p>
-	</div>
-	<div class="panel-column">
-		<img src="{{site.baseurl}}/assets/img/crispr.jpg" alt="hi" class="inline" style="height: 200px;object-fit:cover"/>
-		<p style="color:grey;font-size:12px">CRISPR genome editing technology allows for direct perturbation of genetic variants. (Image: https://news.utexas.edu/)</figcaption>
-		</p>
-	</div>
-</div>
+    nav .nav-inner {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 52px;
+    }
 
-<!--
-	<div class="panel">
-	<div class="panel-column">
-		<img src="{{site.baseurl}}/assets/img/overview.jpg" alt="hi" class="center_img" style="height: 200px;"/>
-		<p style="color:grey">Uni and multi-modal single cell profile allows for studying gene regulatory relationship within and between modality. (Image: Li et al., 2020)</p>
-	</div>
-	<div class="panel-column">
-		<img src="{{site.baseurl}}/assets/img/constse.png" alt="hi" class="center_img" style="height: 200px"/>
-		<p style="color:grey">CRISPR genome editing technology allows for direct perturbation of genetic variants.</figcaption>
-		</p>
-	</div>
-</div>
-	-->
-<br>
-<br>
+    nav .nav-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text);
+      text-decoration: none;
+    }
 
-<p>	I am interested in building <strong>interpretable statistical methods</strong> and adopting <strong>natural language processing</strong> and <strong>graph deep learning</strong> methods to the genomics data.</p>
+    nav .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
 
-<div class="panel-column">
-	<img src="{{site.baseurl}}/assets/img/emb.png" alt="hi" class="inline" />
-	<p style="color:grey">SIMBA, a graph representation learning based single cell embedding method allows joint analysis of cells, genes, motifs and peaks.</p>
-</div>
+    nav .nav-links a {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    nav .nav-links a:hover { color: var(--accent-h); }
+
+    /* ── Main ── */
+    main {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    section { padding-top: 3.5rem; }
+
+    section h2 {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── About ── */
+    #about { padding-top: 3rem; }
+
+    .about-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid var(--border);
+    }
+
+    .about-header h1 {
+      font-size: 1.85rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+    }
+
+    .about-header .title {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .about-links {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .about-links a {
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius);
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+
+    .about-links a:hover {
+      border-color: var(--accent);
+      color: var(--accent-h);
+      background: rgba(184, 154, 172, 0.08);
+    }
+
+    .about-body p {
+      margin-bottom: 0.9rem;
+      font-size: 0.93rem;
+      color: var(--text);
+    }
+
+    .about-body p:last-child { margin-bottom: 0; }
+    .about-body strong { color: var(--accent-h); font-weight: 500; }
+
+    .about-body a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .about-body a:hover { color: var(--accent-h); border-color: var(--accent); }
+
+    /* ── Research Areas ── */
+    .research-areas {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .research-area {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .research-area-icon {
+      font-size: 1.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+      opacity: 0.75;
+    }
+
+    .research-area-body h3 {
+      font-size: 0.93rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .research-area-body p {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .research-area-body a { color: var(--accent); text-decoration: none; }
+    .research-area-body a:hover { color: var(--accent-h); }
+
+    /* ── Publications ── */
+    .pub-list { display: flex; flex-direction: column; gap: 1rem; }
+
+    .pub-item {
+      border-left: 2px solid var(--border);
+      padding-left: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    .pub-item:hover { border-color: var(--accent); }
+
+    .pub-item p {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .pub-item .pub-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .pub-item a { color: var(--accent); text-decoration: none; }
+    .pub-item a:hover { color: var(--accent-h); }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 500;
+      background: var(--surface);
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.1rem 0.45rem;
+      border-radius: 20px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+      letter-spacing: 0.02em;
+    }
+
+    .badge.hl {
+      background: rgba(184, 154, 172, 0.12);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── Awards ── */
+    .award-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .award-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .award-name {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .award-org {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* ── Footer ── */
+    footer {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    footer span, footer a {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    footer a:hover { color: var(--accent-h); }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      .about-header { flex-direction: column; align-items: flex-start; }
+      nav .nav-links { gap: 1rem; }
+      .about-header h1 { font-size: 1.5rem; }
+      .award-item { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-name" href="#about">Jayoung Ryu</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#awards">Awards</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- About -->
+    <section id="about">
+      <div class="about-header">
+        <img class="about-photo" src="assets/img/profile_picture.jpg" alt="Jayoung Ryu" />
+        <div>
+          <h1>Jayoung Ryu</h1>
+          <p class="title">Postdoctoral Associate &middot; Lopez lab &middot; Courant Institute, New York University</p>
+          <div class="about-links">
+            <a href="mailto:jr7348@nyu.edu">Email</a>
+            <a href="https://github.com/jykr" target="_blank" rel="noopener">GitHub</a>
+<a href="https://scholar.google.com/scholar?q=Jayoung+Ryu" target="_blank" rel="noopener">Google Scholar</a>
+          </div>
+        </div>
+      </div>
+      <div class="about-body">
+        <p>
+          I am a Postdoctoral Associate in the <a href="https://biologicalml.org/" target="_blank" rel="noopener">Lopez lab</a>
+          at New York University, working on ML algorithms for genomics and biological data including <strong>experimental design for distributional data</strong>.
+        </p>
+        <p>
+          I completed my Ph.D. in Biomedical Informatics at <a href="https://bmiphd.hms.harvard.edu/" target="_blank" rel="noopener">Harvard Medical School</a>,
+          advised by <a href="http://www.pinellolab.org" target="_blank" rel="noopener">Luca Pinello</a>.
+          My doctoral work focused on developing computational methods for <strong>CRISPR screen analysis</strong>,
+          <strong>single-cell multiomics</strong>, and <strong>gene regulatory inference</strong>
+          using probabilistic graphical models and graph representation learning.
+        </p>
+      </div>
+    </section>
+
+    <!-- Research Areas -->
+    <section id="research">
+      <h2>Research</h2>
+      <div class="research-areas">
+
+        <div class="research-area">
+          <div class="research-area-icon">⬡</div>
+          <div class="research-area-body">
+            <h3>Experimental design for distributional data</h3>
+            <p>
+              My current postdoctoral work in the <a href="https://biologicalml.org/" target="_blank" rel="noopener">Lopez lab</a> at NYU focuses on active learning and experimental design algorithms tailored to distributional observations — developing principled strategies to select informative interventions in biological systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="research-area">
+          <div class="research-area-icon">⬡</div>
+          <div class="research-area-body">
+            <h3>Optimal transport for cross-modal perturbation prediction</h3>
+            <p>
+              At Genentech and NYU, I work on algorithms that align and predict cellular responses across measurement modalities. My <a href="https://proceedings.mlr.press/v258/ryu25a.html" target="_blank" rel="noopener">labeled Gromov-Wasserstein optimal transport</a> method enables cross-modality matching and prediction of single-cell perturbation screen outcomes without requiring paired training data.
+            </p>
+          </div>
+        </div>
+
+        <div class="research-area">
+          <div class="research-area-icon">⬡</div>
+          <div class="research-area-body">
+            <h3>Probabilistic modeling of CRISPR screens</h3>
+            <p>
+              I develop Bayesian probabilistic models that jointly account for genotypic editing outcomes and phenotypic screen readouts to improve variant effect quantification. My work on <a href="https://www.nature.com/articles/s41588-024-01726-6" target="_blank" rel="noopener">CRISPR-BEAN</a> introduced a graphical modeling framework for base editor reporter screens, enabling accurate identification of causal variants for complex traits such as cellular LDL uptake.
+            </p>
+          </div>
+        </div>
+
+        <div class="research-area">
+          <div class="research-area-icon">⬡</div>
+          <div class="research-area-body">
+            <h3>Graph representation learning for single-cell multiomics</h3>
+            <p>
+              I design graph neural network-based methods that embed cells and genomic features jointly to uncover regulatory relationships across modalities. <a href="https://www.nature.com/articles/s41592-023-01899-8" target="_blank" rel="noopener">SIMBA</a> formulates single-cell data as a heterogeneous graph, enabling simultaneous analysis of cells, genes, chromatin peaks, and sequence motifs in a shared embedding space.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <p class="pub-title">
+            <a href="https://proceedings.mlr.press/v258/ryu25a.html" target="_blank" rel="noopener">
+              Cross-modality Matching and Prediction of Perturbation Responses with Labeled Gromov-Wasserstein Optimal Transport
+            </a>
+            <span class="badge hl">AISTATS 2025</span>
+          </p>
+          <p>Ryu J., Lopez R., Bunne C., &amp; Regev A.</p>
+        </div>
+
+        <div class="pub-item">
+          <p class="pub-title">
+            <a href="https://www.nature.com/articles/s41588-024-01726-6" target="_blank" rel="noopener">
+              Joint genotypic and phenotypic outcome modeling improves base editing variant effect quantification
+            </a>
+            <span class="badge hl">Nature Genetics 2024</span>
+          </p>
+          <p>Ryu J., Barkal S., et al.</p>
+        </div>
+
+        <div class="pub-item">
+          <p class="pub-title">
+            <a href="https://www.nature.com/articles/s41586-024-07510-0" target="_blank" rel="noopener">
+              Deciphering the impact of genomic variation on function
+            </a>
+            <span class="badge hl">Nature 2024</span>
+          </p>
+          <p>IGVF Consortium</p>
+        </div>
+
+        <div class="pub-item">
+          <p class="pub-title">
+            <a href="https://www.nature.com/articles/s41592-023-01899-8" target="_blank" rel="noopener">
+              SIMBA: single-cell embedding along with features
+            </a>
+            <span class="badge hl">Nature Methods 2023</span>
+          </p>
+          <p>Chen H., Ryu J., Vinyard M. E., Lerer A. &amp; Pinello L.</p>
+        </div>
+
+        <div class="pub-item">
+          <p class="pub-title">
+            <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2646-3" target="_blank" rel="noopener">
+              A new class of constitutively active super-enhancers is associated with the fast recovery of 3D chromatin loops
+            </a>
+            <span class="badge">BMC Bioinformatics 2019</span>
+          </p>
+          <p>Ryu J., Kim H., Yang D., Lee A. J. &amp; Jung I.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards">
+      <h2>Awards &amp; Fellowships</h2>
+      <div class="award-list">
+
+        <div class="award-item">
+          <span class="award-name">Moore Foundation Postdoctoral Fellowship</span>
+          <span class="award-org">Gordon and Betty Moore Foundation, 2026</span>
+        </div>
+
+        <div class="award-item">
+          <span class="award-name">Best Paper Award &mdash; ICML AI4Science Workshop</span>
+          <span class="award-org">International Conference for Machine Learning, 2024</span>
+        </div>
+
+        <div class="award-item">
+          <span class="award-name">MOGAM-KASBP Scholar</span>
+          <span class="award-org">MOGAM Institute &amp; Korean American Society in Biotech and Pharmaceuticals &mdash; 8 selected, 2022</span>
+        </div>
+
+        <div class="award-item">
+          <span class="award-name">Doctoral Study Abroad Program Scholar</span>
+          <span class="award-org">Korea Foundation for Advanced Studies &mdash; 4 selected in biological science, 2019&ndash;2024</span>
+        </div>
+
+        <div class="award-item">
+          <span class="award-name">KAIST Presidential Fellow</span>
+          <span class="award-org">Korea Advanced Institute of Science &amp; Technology</span>
+        </div>
+
+        <div class="award-item">
+          <span class="award-name">Korea Presidential Science Scholarship</span>
+          <span class="award-org">Korea Student Aid Foundation &mdash; 150 students nationwide</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>&copy; 2026 Jayoung Ryu</span>
+    <div>
+      <a href="mailto:jr7348@nyu.edu">jr7348@nyu.edu</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://github.com/jykr" target="_blank" rel="noopener">github.com/jykr</a>
+    </div>
+  </footer>
+
+</body>
+</html>
