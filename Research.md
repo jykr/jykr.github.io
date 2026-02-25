@@ -5,22 +5,17 @@ sidebar_link: true
 sidebar_sort_order: 2
 ---
 
-### Computational method development on CRISPR base editor screen
+### [Computational method development on CRISPR base editor screen](https://github.com/jykr/beige)
 *Aug 2021-*  
+[CRISPR base editors](http://www.nature.com/articles/s41587-020-0561-9) have opened a way to investigate the effect of individual variant to the phenotype. In [SpRY-base editor](https://www.science.org/doi/10.1126/science.aba8853) screens, virtually all variants can be edited and by selecting cells based on the phenotype we can screen the variants that have effect to the phenotype of interest. 
+<img src="{{site.baseurl}}/assets/img/research/anbe_schema.png" alt="base editor reporter screens" class="inline" width="600px" style="margin:10px 10px"/>
+<p style="color:grey; font-size:12px"> <center><em> Experimental design of base editor reporter screen </em></center> </p>
 <div class="panel">
-	<div class="panel-column">
-		<img src="{{site.baseurl}}/assets/img/research/be.png" alt="base editor" class="inline" width="200px"/>
-		<p style="color:grey; font-size:12px">Image source: Anzalone et al., 2020</p>
-	</div>
-	
-
-<div class="panel-column">
-		<img src="{{site.baseurl}}/assets/img/research/screen.png" alt="base editor" class="inline" width="500px" />
-		<p style="color:grey; font-size:12px"></p>
-</div>
+	<img src="{{site.baseurl}}/assets/img/research/model_design.svg" alt="base editor" class="inline" width="200px" />
+	<p>As part of the NIH <a href="https://www.genome.gov/Funded-Programs-Projects/Impact-of-Genomic-Variation-on-Function-Consortium">IGVF consortium</a> and in collaboration with <a href="https://sherwoodlab.bwh.harvard.edu/">Sherwood lab</a>, I am developing computational method to better identify the functional variants in CRISPR base editor screens. Specifically, I'm working on developing the screen analysis method that takes the variable editing efficiency and pattern into account that utilizes stochastic variational inference (SVI) through <a href="http://pyro.ai/">probabilistic programming language</a>. The model directly recapitulates count data generation process which provides direct interpretability.  </p>
 </div>
 
-[CRISPR base editors](http://www.nature.com/articles/s41587-020-0561-9) have opened a way to investigate the effect of individual variant to the phenotype. In [SpRY-base editor](https://www.science.org/doi/10.1126/science.aba8853) screens, virtually all variants can be edited and by selecting cells based on the phenotype we can screen the variants that have effect to the phenotype of interest. As part of the [IGVF consortium](https://www.genome.gov/Funded-Programs-Projects/Impact-of-Genomic-Variation-on-Function-Consortium) and in collaboration with [Sherwood lab](https://sherwoodlab.bwh.harvard.edu/), I am developing computational method to better identify the functional variants in CRISPR base editor screens. Specifically, I'm working on developing the interpretable model based on probabilistic programming language [Pyro](http://pyro.ai/).   
+   
 
 ---
 
